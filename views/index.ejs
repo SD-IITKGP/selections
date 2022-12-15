@@ -1,0 +1,28 @@
+<html lang="en">
+<%- include("./partials/head.ejs") %>
+
+<body>
+  <%- include("./partials/nav.ejs") %>
+
+  <div class="blogs content">
+    <h2>All Names</h2>
+
+    <% if (blogs.length > 0) { %>
+      <% blogs.forEach(blog => { %>
+        <a class="single" href="/blogs/<%= blog._id %>">
+          <h3 class="Name">Name: <%= blog.Name %></h3>
+          <h4 class="refferedby">Reffered By: <%= blog.refferedby %></h4>
+          <p class="Department">Department: <%= blog.Department %></p>
+          <p class="gmail">Gamil: <%= blog.gmail %></p>
+          <p class="contactnumber">Contact Number: <%= blog.contactnumber %></p>
+        </a>
+      <% }) %>
+    <% } else { %>
+      <p>There are no Names to display...</p>
+    <% } %>
+    
+  </div>
+
+  <%- include("./partials/footer.ejs") %>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<html lang="en">
+<%- include("./partials/head.ejs") %>
+
+<body>
+  <%- include("./partials/nav.ejs") %>
+
+  <div class="create-blog content">
+    <form action="/blogs" method="POST">
+      <label for="Name">Name:</label>
+      <input type="text" id="Name" name="Name" required>
+      <label for="Department">Department:</label>
+      <input type="text" id="Department" name="Department" required>
+      <label for="gmail">Gmail:</label>
+      <input type="text" id="gmail" name="gmail" required>
+      <label for="contactnumber">Contact Number:</label>
+      <input type="text" id="contactnumber" name="contactnumber" required>
+      <label for="refferedby">Reffered By (Name):</label>
+      <input type="text" id="refferedby" name="refferedby" required>
+      <label for="body">Skills:</label>
+      <textarea id="Skills" name="Skills" required></textarea>
+      <button>Submit</button>
+    </form>
+  </div>
+
+  <%- include("./partials/footer.ejs") %>
+</body>
+</html>
